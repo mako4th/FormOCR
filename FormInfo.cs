@@ -3,16 +3,25 @@ using OpenCvSharp;
 
 namespace FormOCR
 {
+    public class orderData
+    {
+        public string customerName;
+        public string delivDate;
+        public string useDate;
+        public string itemName;
+        public string quant;
+        public string unit;
+    }
+
+    public class orderdatas
+    {
+        public List<orderData>;
+    }
+
     public class FormInfo
     {
-        public FileInfo file;
-        public Rect[] RoiList;
-
-        public FormInfo(FileInfo file,Rect[] RoiList)
-        {
-            this.file = file;
-            this.RoiList = RoiList;
-        }
+        public string FormName;
+        
     }
 }
 

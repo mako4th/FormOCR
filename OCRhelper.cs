@@ -34,8 +34,17 @@ namespace FormOCR
         {
             using (Mat mat = new Mat(info.file.FullName))
             {
-                string word = "";
+                string outputText = "";
+                Rect[] componentRects = new Rect[10];
+                string[] componentTexts = new string[100];
+                float[] componentConfidences = new float[10];
 
+
+                foreach(Rect rect in info.RoiList)
+                {
+                    Mat roi = new Mat(mat, rect);
+                    ot.Run(roi, out outputText, out componentRects, out componentTexts, out componentConfidences);
+                }
 
 
 

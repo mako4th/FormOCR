@@ -1,20 +1,22 @@
 ﻿# FormOCR
 
-事前準備
-注文フォーム（複数種類）の読み取り位置情報(ROI)をcsvで作成する。
-public List<Rect> ROILow{
+事前準備  
+注文フォーム（複数種類）の読み取り位置情報(ROI)をcsvで作成する。  
+  
+    public List<Rect> ROILow{
     
-}
-public List<>
+    }
+    public List<>
 
 
-スキャン画像から顧客名を読み取る。
+スキャン画像から顧客名を読み取る。  
 顧客名からROI情報を取得する。
 
-入力画像から読み取るための情報
+入力画像から読み取るための情報  
 
 ## 出力
 入力画像から読み取ったデータ    
+  
     public class orderDatas
     {
         public List<orderData>;
@@ -31,20 +33,18 @@ public List<>
 
 
 
-whiteListの読み込み
-OCRTesseract.Create
+whiteListの読み込み  
+OCRTesseract.Create  
 
-対象画像の読み込み
-roi[]の読み込み
-roiでループ
-出力
-
-
+対象画像の読み込み  
+roi[]の読み込み  
+roiでループ  
+出力  
 
 
-VisualStudio
+<hr>
 
-OpenCvSharp4
-
+VisualStudio for Mac 2022  
+OpenCvSharp4  
 OpenCvSharp4.runtime.osx.10.15-x64
 
