@@ -32,22 +32,17 @@ namespace FormOCR
 
         public void ocrRun(FormInfo info)
         {
-            using (Mat mat = new Mat(info.file.FullName))
+            using Mat mat = new Mat(info.imageFile.FullName);
+            string outputText = "";
+            Rect[] componentRects = new Rect[10];
+            string?[] componentTexts = new string[100];
+            float[] componentConfidences = new float[10];
+
+
+            foreach (Rect rect in info.ROIs)
             {
-                string outputText = "";
-                Rect[] componentRects = new Rect[10];
-                string[] componentTexts = new string[100];
-                float[] componentConfidences = new float[10];
-
-
-                foreach(Rect rect in info.RoiList)
-                {
-                    Mat roi = new Mat(mat, rect);
-                    ot.Run(roi, out outputText, out componentRects, out componentTexts, out componentConfidences);
-                }
-
-
-
+                Mat roi = new Mat(mat, rect);
+                ot.Run(roi, out outputText, out componentRects, out componentTexts, out componentConfidences);
             }
         }
 

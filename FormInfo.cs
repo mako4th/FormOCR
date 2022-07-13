@@ -3,7 +3,7 @@ using OpenCvSharp;
 
 namespace FormOCR
 {
-    public class orderData
+    public class OrderData
     {
         public string customerName;
         public string delivDate;
@@ -13,15 +13,12 @@ namespace FormOCR
         public string unit;
     }
 
-    public class orderdatas
-    {
-        public List<orderData>;
-    }
-
     public class FormInfo
     {
         public string FormName;
-        
+        public FileInfo imageFile;
+        public List<Rect> ROIs;
+        public List<OrderData> orderdatas;
     }
 }
 
