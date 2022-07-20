@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<Root>
+    <FormInfo>
+        <formName>Mako4thForm1</formName>
+        <firstLowY>200</firstLowY>
+        <delivDateX>300</delivDateX>
+        <delivDateW>100</delivDateW>
+        <useDateX>400</useDateX>
+        <useDateW>100</useDateW>
+        <itemNameX>200</itemNameX>
+        <itemNameW>100</itemNameW>
+        <quantX>450</quantX>
+        <quantW>100</quantW>
+        <unitX>500</unitX>
+        <unitW>100</unitW>
+        <rowHeight>30</rowHeight>
+    </FormInfo>
+    <FormInfo>
+        <formName>Mako4thForm2</formName>
+        <firstLowY>200</firstLowY>
+        <delivDateX>300</delivDateX>
+        <delivDateW>100</delivDateW>
+        <useDateX>400</useDateX>
+        <useDateW>100</useDateW>
+        <itemNameX>200</itemNameX>
+        <itemNameW>100</itemNameW>
+        <quantX>450</quantX>
+        <quantW>100</quantW>
+        <unitX>500</unitX>
+        <unitW>100</unitW>
+        <rowHeight>30</rowHeight>
+    </FormInfo>
+</Root>

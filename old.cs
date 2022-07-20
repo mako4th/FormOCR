@@ -2,6 +2,8 @@
 
 namespace cvsharpWork
 {
+
+    /*
     public class Class1
     {
         static void Main(string[] args)
@@ -33,6 +35,9 @@ namespace cvsharpWork
             return;
         }
     }
+    */
+
+
   //  OEM_TESSERACT_ONLY,           // Run Tesseract only - fastest; deprecated
   //267   OEM_LSTM_ONLY,                // Run just the LSTM line recognizer.
   //268   OEM_TESSERACT_LSTM_COMBINED,  // Run the LSTM recognizer, but allow fallback
@@ -70,6 +75,8 @@ namespace cvsharpWork
         }
     }
 
+
+    /*
     class class2
     {
         public void ocrtext()
@@ -157,4 +164,7 @@ namespace cvsharpWork
             }
         }
     }
+
+    */
+
 }

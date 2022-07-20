@@ -15,4 +15,12 @@
     <PackageReference Include="OpenCvSharp4" Version="4.6.0.20220608" />
     <PackageReference Include="OpenCvSharp4.runtime.osx.10.15-x64" Version="4.6.0.20220608" />
   </ItemGroup>
+  <ItemGroup>
+    <None Update="sampleImages\orderForm\Page0001.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="CustomerInfo.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
 </Project>
