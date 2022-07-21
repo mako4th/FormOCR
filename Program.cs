@@ -12,16 +12,15 @@ namespace FormOCR
             List<Rect> rects = new List<Rect>();
 
             var elem = getxelements(@"CustomerInfo.xml", "Mako4thForm2");
-            Console.WriteLine(elem.Elements("firstLowY").First().Value);
-            //showElements(elem);
 
-            //string name = form.Element("name").Value　?? "";
-            //string delivDateX = form.Element("delivDateX").Value;
-            //string useDateX = form.Element("useDateX").Value;
-            //string itemNameX = form.Element("i")
+            int rx = int.Parse(elem.Elements("delivDateX").First().Value);
+            int ry = int.Parse(elem.Elements("firstLowY").First().Value);
+            int rw = int.Parse(elem.Elements("delivDateW").First().Value);
+            int rh = int.Parse(elem.Elements("rowHeight").First().Value);
 
-
-
+            rects.Add(new Rect(rx, ry, rw, rh));
+            Console.WriteLine(rects.First().ToString());
+            showElements(elem);
         }
         static IEnumerable<XElement> getxelements(string xmlfile,string formName)
         {
