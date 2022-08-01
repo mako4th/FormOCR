@@ -1,5 +1,8 @@
-﻿using System;
-using OpenCvSharp;
+﻿using OpenCvSharp;
+using System.Linq;
+using System.Collections.Generic;
+using System.Xml.Linq;
+using System.Diagnostics;
 
 namespace FormOCR
 {
@@ -25,18 +28,46 @@ namespace FormOCR
 
     public class FormInfo
     {
-        public string FormName;
+        public FileInfo FormInfoXML;
+        public List<string> FormNames;
+
         public FileInfo imageFile;
         public List<Rect> ROIs;
         public List<OrderData> orderdatas;
 
-        public FormInfo(string formName,FileInfo imageFile,List<Rect> rois)
+        public FormInfo(FileInfo xmlfile)
         {
-            this.FormName = formName;
-            this.imageFile = imageFile;
-            this.ROIs = rois;
+            this.FormInfoXML = xmlfile;
+        }
+
+        public void searchByName(string formName)
+        {
+            var elements = getxelements(FormInfoXML.FullName, formName);
+            if(elements.Count() > 0)
+            {
+                Debug.WriteLine("detect " + elements.Count().ToString() + " forms");
+            }
+            else
+            {
+                Debug.WriteLine("no detect ");
+            }
+        }
+
+
+        public IEnumerable<XElement> getxelements(string xmlfile, string formName)
+        {
+            XElement xe = XElement.Load(xmlfile);
+            var formInfos = xe.Elements("FormInfo");
+            var result = formInfos.Where(x => x.Element("formName").Value == formName);
+            return result;
+        }
+
+        public void elementListup(IEnumerable<XElement> elements)
+        {
 
         }
+
+
     }
 }
 
